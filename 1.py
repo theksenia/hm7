@@ -1,15 +1,10 @@
-a = input()
-a = str(a)
-result = 0
-count = 0
-def summa_cifr(a, count, result):
-    c = ''
-    c = c + a[count]
-    c = int(c)
-    result = result + c
-    if count < len(a):
-        return summa_cifr(a,count+1, result)
-    else:
-        return result
-summa_cifr(a, count, result)
-print(result)
+b= int(input("Enter: "))
+
+def sum(x):
+    s = 0
+    while x > 0:
+        s += x % 10
+        x //= 10
+    return s
+
+print(sum(b))
