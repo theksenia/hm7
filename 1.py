@@ -1,10 +1,8 @@
 b= int(input("Enter: "))
 
 def sum(x):
-    s = 0
-    while x > 0:
-        s += x % 10
-        x //= 10
-    return s
-
+    if x > 0:
+        return sum(x // 10) + x % 10
+    else:
+        return 0
 print(sum(b))
