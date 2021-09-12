@@ -1,5 +1,3 @@
-#a= int(input("Enter: "))
-#b= int(input("Enter: "))
 def outer(a,b):
     def inner(a,b):
         global x
