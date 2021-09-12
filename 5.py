@@ -1,9 +1,14 @@
-a = int(input("Enter: "))
-b = int(input("Enter: "))
-def sum(a,b):
-    def pro(x):
-        x= a+b
+#a= int(input("Enter: "))
+#b= int(input("Enter: "))
+def outer(a,b):
+    def inner(a,b):
+        global x
+        x = a+b
+        return x
     global x
-    x= x+5
+    inner(a, b)
+    x = x+5
     return x
-print(sum(a,b))
+
+print(outer(8,15))
+
